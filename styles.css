@@ -32,10 +32,12 @@
   }
 
 :root {
-    --color-brand-light: #819B57;
+    --color-brand-normal: #819B57;
     --color-brand-dark: #465929;
     --color-primary-dark: #31261a;
     --color-primary-light: #faf4ea;
+    --color-secondary-dark: #A28268; 
+    --color-brand-light: #cfcfbc;
 }
 /* Base */
 * {
@@ -50,6 +52,7 @@ ul {
 
 body {
     color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
     font-family: Poppins, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -94,8 +97,8 @@ address {
     padding: 16px 32px;
     color: var(--color-primary-light);
     font-weight: 600; 
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
+    background-color: var(--color-brand-normal);
+    border: 2px solid var(--color-brand-normal);
     border-radius: 8px;
     cursor: pointer;
 }
@@ -112,7 +115,7 @@ address {
 }
 
 .link:hover {
-    color:var(--color-brand-light);
+    color:var(--color-brand-normal);
     
 }
 
@@ -159,13 +162,13 @@ address {
 }
 
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 /* Advantages section */
 .advantages-section {
     padding: 16px 0;
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
 }
 
 .advantages-list {
@@ -184,6 +187,10 @@ address {
     font-size: 64;
     font-weight: 900;
     line-height: 1,3;
+}
+
+.section-title.centered {
+    text-align: center;
 }
 
 .section-title .accent {
@@ -211,7 +218,7 @@ address {
 }
 
 .traditions-text .brand {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 
@@ -225,7 +232,21 @@ address {
 
 /* Chefs section */
 .chefs-title {
-    margin-bottom: 80px;
+    max-width: 520px;
+    margin-bottom: 0 auto 80px;
+}
+
+.chefs-title::before, 
+.chefs-title::after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: ''
+}
+
+.chef-photo {
+    border-radius: 4px 4px 4px 200px; 
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chef-title {
@@ -275,9 +296,17 @@ address {
 }
 
 .address-link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 .address-copyright {
     font-size: 14px;
+}
+
+/* footer */
+.footer {
+    background-image: url(/images/footer-background_.png);
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
